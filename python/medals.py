@@ -43,8 +43,18 @@ def createMedalTable(results):
         first = first1[2:]
         second = second1[2:]
         third = third1[2:]
+        pos1 = first1[0]
+        pos2 = second1[0]
+        pos3 = third[0]
         val1 = res_table.get(first) + 3
-        val2 = res_table.get(second) + 2
+
+        if pos2 == '1':
+
+            val2 = res_table.get(second) + 3
+        else:
+            val2 = res_table.get(second) + 2
+
+        
         val3 = res_table.get(third) + 1
         res_table[first] = val1
         res_table[second] = val2
@@ -62,7 +72,7 @@ def test_function():
         "France": 4,
         "ROC": 4,
         "USA": 3,
-        "Qatar": 3, # this is wrong this wouldnt pass the test as the actual outcome is 2
+        "Qatar": 3,
         "China": 3,
         "Germany": 2,
         "Brazil": 1,
@@ -75,6 +85,6 @@ if __name__ == "__main__":
     R_T = createMedalTable(medalResults)
     print(R_T)
     #for x in medalResults:
-    #    podium = x.get('podium')
-    #    first = podium[0]
-    #    print(first[2:])
+     #   podium = x.get('podium')
+     #   first = podium[0]
+      #  print(first[0])
