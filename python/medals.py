@@ -20,7 +20,9 @@ medalResults = [
 def createMedalTable(results):
     # Use the results object above to create a medal table
     # The winner gets 3 points, second place 2 points and third place 1 point
-    res_table = {
+
+    res_table = {   # on a further itoration i would make it so that if this table creation is done automatically
+    # such as that if there is a team that isnt already in the table a new value would be created
         "Italy": 0,
         "France": 0,
         "ROC": 0,
